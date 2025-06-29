@@ -1,28 +1,43 @@
-def factorial(n):
-    result = 1
-    for i in range(1, n + 1):
-        result *= i
-    return result
+def read_file(filename):
+    try:
+        with open(filename, 'r') as file:
+            content = file.read()
+            print("File content:\n", content)
+    except FileNotFoundError:
+        print("Error: The file was not found.")
+    except PermissionError:
+        print("Error: You don't have permission to read the file.")
+    except Exception as e:
+        print("An unexpected error occurred:", str(e))
 
 # Example
-num = int(input("Enter a number: "))
-print("Factorial of", num, "is", factorial(num))
+file_name = input("Enter the filename: ")
+read_file(file_name)
 
 
-def factorial(n):
-    if n == 0 or n == 1:
-        return 1
-    else:
-        return n * factorial(n - 1)
+
+def write_to_file(filename, data):
+    try:
+        with open(filename, 'w') as file:
+            file.write(data)
+        print("Data written successfully.")
+    except Exception as e:
+        print("Error while writing to file:", str(e))
 
 # Example
-num = int(input("Enter a number: "))
-print("Factorial of", num, "is", factorial(num))
+write_to_file("example.txt", "This is the first line.\n")
 
 
-import math
+def append_to_file(filename, data):
+    try:
+        with open(filename, 'a') as file:
+            file.write(data)
+        print("Data appended successfully.")
+    except Exception as e:
+        print("Error while appending to file:", str(e))
 
-num = int(input("Enter a number: "))
-print("Factorial of", num, "is", math.factorial(num))
+# Example
+append_to_file("example.txt", "This is an additional line.\n")
+
 
     
