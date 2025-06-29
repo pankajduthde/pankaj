@@ -1,43 +1,22 @@
-def read_file(filename):
-    try:
-        with open(filename, 'r') as file:
-            content = file.read()
-            print("File content:\n", content)
-    except FileNotFoundError:
-        print("Error: The file was not found.")
-    except PermissionError:
-        print("Error: You don't have permission to read the file.")
-    except Exception as e:
-        print("An unexpected error occurred:", str(e))
+ student_marks = {}
 
-# Example
-file_name = input("Enter the filename: ")
-read_file(file_name)
+n = int(input("Enter number of students: "))
+for _ in range(n):
+    name = input("Enter student name: ")
+    marks = int(input("Enter marks: "))
+    student_marks[name] = marks
+
+print("\nStudent Marks:")
+for name, marks in student_marks.items():
+    print(name, ":", marks)
 
 
-
-def write_to_file(filename, data):
-    try:
-        with open(filename, 'w') as file:
-            file.write(data)
-        print("Data written successfully.")
-    except Exception as e:
-        print("Error while writing to file:", str(e))
-
-# Example
-write_to_file("example.txt", "This is the first line.\n")
+list[start:stop:step]
+print(numbers[1:4])     # [20, 30, 40]
+print(numbers[:3])      # [10, 20, 30]
+print(numbers[3:])      # [40, 50, 60, 70]
+print(numbers[::2])     # [10, 30, 50, 70]
+print(numbers[::-1])    # [70, 60, 50, 40, 30, 20, 10] (reversed list)
+print(numbers[-4:-1])   # [40, 50, 60]
 
 
-def append_to_file(filename, data):
-    try:
-        with open(filename, 'a') as file:
-            file.write(data)
-        print("Data appended successfully.")
-    except Exception as e:
-        print("Error while appending to file:", str(e))
-
-# Example
-append_to_file("example.txt", "This is an additional line.\n")
-
-
-    
