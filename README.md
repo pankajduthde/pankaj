@@ -1,21 +1,28 @@
+def factorial(n):
+    result = 1
+    for i in range(1, n + 1):
+        result *= i
+    return result
+
+# Example
 num = int(input("Enter a number: "))
-
-# Check even or odd
-if num % 2 == 0:
-    print("The number is Even.")
-else:
-    print("The number is Odd.")
+print("Factorial of", num, "is", factorial(num))
 
 
-# Initialize the sum variable
-total = 0
+def factorial(n):
+    if n == 0 or n == 1:
+        return 1
+    else:
+        return n * factorial(n - 1)
 
-# Loop from 1 to 50
-for i in range(1, 51):
-    total += i
+# Example
+num = int(input("Enter a number: "))
+print("Factorial of", num, "is", factorial(num))
 
-# Print the result
-print("The sum of integers from 1 to 50 is:", total)
 
+import math
+
+num = int(input("Enter a number: "))
+print("Factorial of", num, "is", math.factorial(num))
 
     
