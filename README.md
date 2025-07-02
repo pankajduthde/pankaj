@@ -1,22 +1,21 @@
- student_marks = {}
+num1 = int(input("Enter the first number :"))
+num2 = int(input("Enter the second number :"))
+int(num1+num2)
+print("addition",num1+num2)
 
-n = int(input("Enter number of students: "))
-for _ in range(n):
-    name = input("Enter student name: ")
-    marks = int(input("Enter marks: "))
-    student_marks[name] = marks
+num3 =int(input("Enter the third number :"))
+num4 = int(input("Enter the fourth number :"))
+int(num3-num4)
+print("subtraction",num3-num4)
 
-print("\nStudent Marks:")
-for name, marks in student_marks.items():
-    print(name, ":", marks)
+num5 = int(input("Enter the fifth number :"))
+num6 = int(input("Enter the sixth number :"))
+int(num5*num6)
+print("multiplication",num5*num6)
 
-
-list[start:stop:step]
-print(numbers[1:4])     # [20, 30, 40]
-print(numbers[:3])      # [10, 20, 30]
-print(numbers[3:])      # [40, 50, 60, 70]
-print(numbers[::2])     # [10, 30, 50, 70]
-print(numbers[::-1])    # [70, 60, 50, 40, 30, 20, 10] (reversed list)
-print(numbers[-4:-1])   # [40, 50, 60]
+num7 = int(input("Enter the seventh number :"))
+num8 = int(input("Enter the eighth number :"))
+int(num7/num8)
+print("division",num7/num8)
 
 
