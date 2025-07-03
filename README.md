@@ -19,3 +19,9 @@ int(num7/num8)
 print("division",num7/num8)
 
 
+input("Enter your first name:")
+input("Enter your last name:")
+letter = "Hello, john doe! welcome to the python program"
+print(letter)
+
+
